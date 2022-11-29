@@ -1,0 +1,20 @@
+//variables
+
+$background: #F6F8FF;
+$component: #FEFEFE;
+$button: #0079FF;
+$hover: #60ABFF;
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background-color: $background;
+}
+
