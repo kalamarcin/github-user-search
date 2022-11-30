@@ -1,20 +1,30 @@
-//variables
+//var
+:root {
+	--font: #4B6A9B;
+  --front-second: #2B3442;
+	--background: #f6f8ff;
+	--component: #fefefe;
+	--button: #0079ff;
+	--hover: #60abff;
+}
 
-$background: #F6F8FF;
-$component: #FEFEFE;
-$button: #0079FF;
-$hover: #60ABFF;
+[data-theme='dark'] {
+	--background: #141d2f;
+}
 
-
-
+//style
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: 'Space Mono', monospace;
-  background-color: $background;
+	font-family: 'Space Mono', monospace;
 }
 
+.App {
+	background-color: var(--background);
+	height: 100vh;
+	padding: 1.5rem 1.5rem;
+}
