@@ -32,7 +32,7 @@ export const GlobalStoreContext = createContext({
 	changeUserBlog: () => {},
 	changeUserTwitter: () => {},
 	changeLogin: () => {},
-	changeUserName: () => {}
+	changeUserName: () => {},
 })
 
 const GlobalStore = props => {
@@ -132,7 +132,7 @@ const GlobalStore = props => {
 		changeUserBlog: handlerUserBlog,
 		changeUserTwitter: handlerUserTwitter,
 		changeLogin: handlerLogin,
-		changeUserName: handlerChangeUserName
+		changeUserName: handlerChangeUserName,
 	}
 
 	return <GlobalStoreContext.Provider value={providerValue}>{props.children}</GlobalStoreContext.Provider>

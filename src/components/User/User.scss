@@ -30,12 +30,10 @@
 				font-size: 16px;
 				font-weight: 700;
 			}
-
 			.login {
 				color: var(--button);
 				margin-bottom: 10px;
 			}
-
 			.created {
 				color: var(--font);
 				font-weight: 400;
@@ -62,11 +60,13 @@
 		grid-row-gap: 1px;
 		padding: 20px;
 		background-color: var(--background);
+
 		.columns {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+
 			.title {
 				color: var(--font);
 				font-size: 11px;
@@ -80,8 +80,48 @@
 				color: var(--font);
 			}
 		}
-		
+	}
+	.user-contact {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		grid-column-gap: 5px;
+		grid-row-gap: 1px;
+		.icon_p {
+			display: flex;
+			align-items: center;
+			padding: 0px 0 15px 0;
+			color: var(--font);
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 22px;
+			a {
+				text-decoration: none;
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 22px;
+				color: var(--font);
+				&:hover {
 
-		
+				}
+			}
+			i {
+				width: 20px;
+				color: var(--font);
+				margin-right: 20px;
+				font-size: 20px;
+			}
+		}
+		.empty {
+			padding: 0px 0 15px 0;
+			color: var(--font);
+			opacity: 0.5;
+			i {
+				width: 20px;
+				margin-right: 20px;
+				font-size: 20px;
+			}
+		}
 	}
 }
