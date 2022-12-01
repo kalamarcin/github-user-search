@@ -1,11 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalStoreContext } from '../../Store/GlobalStore'
 import Moment from 'moment'
-import locationIcon from '../../assets/icon-location.svg'
-import blogIcon from '../../assets/icon-website.svg'
-import twitterIcon from '../../assets/icon-twitter.svg'
-import CompanyIcon from '../../assets/icon-company.svg'
-
+//style
 import './User.scss'
 
 const User = () => {
