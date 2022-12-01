@@ -2,9 +2,10 @@
 	display: flex;
     justify-content: space-between;
 	align-items: center;
+	color: var(--font-header);
 	
 	.header {
-		color: var(--front-second);
+		color: var(--front);
 		font-size: 26px;
 	}
 
@@ -20,6 +21,7 @@
 			font-size: 13px;
 			line-height: 19px;
 			color: var(--font);
+			letter-spacing: 2.5px;
 		}
 		
 		.icon {

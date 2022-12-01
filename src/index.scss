@@ -1,15 +1,25 @@
 //var
 :root {
+
+  --font-main: 'Space Mono', monospace;
+  --font-header :#222731  ;
 	--font: #4B6A9B;
-  --front-second: #2B3442;
+  --font-second: #FFFFFF;
 	--background: #f6f8ff;
 	--component: #fefefe;
 	--button: #0079ff;
 	--hover: #60abff;
+  --input-line:#0079ff;
+  --box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
 }
 
 [data-theme='dark'] {
+  --font: #FFFFFF;
 	--background: #141d2f;
+  --component:#1E2A47;
+  --box-shadow: none;
+  --font-header :#FFFFFF;
+  --input-line:#0079ff;
 }
 
 //style

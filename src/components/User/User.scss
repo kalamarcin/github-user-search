@@ -1,0 +1,29 @@
+.user-box {
+	display: flex;
+	margin: 20px 0 20px 0;
+	box-shadow: var(--box-shadow);
+    border-radius: 15px;
+	background-color: var(--component);
+    padding: 30px 25px 30px 25px;
+
+	.user-info {
+		.avatar {
+			img {
+			}
+		}
+		.user-data {
+		}
+	}
+	.user-decription {
+	}
+	.stats-box {
+		.repos {
+		}
+		.follower {
+		}
+		.following {
+		}
+	}
+	.user-contact {
+	}
+}
