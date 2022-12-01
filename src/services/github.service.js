@@ -3,7 +3,7 @@ import { GlobalStoreContext } from '../../Store/GlobalStore'
 import React, { useContext } from 'react' 
 const API = 'https://api.github.com/users/'
 
-const GlobalStore = useContext(GlobalStoreContext)
+
 
 const searchForJoined = () => {
 

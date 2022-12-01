@@ -2,23 +2,35 @@ import React, { createContext, useState } from 'react'
 import useLocalStorage from 'use-local-storage'
 
 export const GlobalStoreContext = createContext({
+	//theme
 	theme: '',
 	switchTheme: () => {},
+	//Fetch
+	user: '',
 	userName: '',
-	userURL: '',
+	userCompany: '',
 	joined: '',
 	userBio: '',
 	publicRepo: '',
-	fallowers: '',
+	followers: '',
 	location: '',
 	userBlog: '',
 	userTwitter: '',
-	data: '',
-	userImg:'',
+	login: '',
+	userImg: '',
+	//setMethod
 	changeUser: () => {},
 	changeJoined: () => {},
-	handlerImg: () => {}
-	
+	changeImg: () => {},
+	changeCompany: () => {},
+	changeUserBio: () => {},
+	changePublicRepo: () => {},
+	changeFollowers: () => {},
+	changeLocation: () => {},
+	changeUserBlog: () => {},
+	changeUserTwitter: () => {},
+	changeLogin: () => {},
+	changeUserName: () => {}
 })
 
 const GlobalStore = props => {
@@ -27,46 +39,92 @@ const GlobalStore = props => {
 		const newTheme = theme === 'light' ? 'dark' : 'light'
 		setTheme(newTheme)
 	}
-	const [userName, setUserName] = useState('octocat')
+	const [user, setUser] = useState('octocat')
+	const [userName, setUserName] = useState('')
 	const [userImg, setUserImg] = useState('')
-	const [userURL, setUserURL] = useState('')
+	const [userCompany, setUserCompany] = useState('')
 	const [joined, setJoined] = useState('')
 	const [userBio, setUserBio] = useState('')
 	const [publicRepo, setPublicRepo] = useState('')
-	const [fallowers, setFallowers] = useState('')
+	const [followers, setFollowers] = useState('')
 	const [location, setLocation] = useState('')
 	const [userBlog, setUserBlog] = useState('')
 	const [userTwitter, setUserTwitter] = useState('')
-	const [data, setData] = useState('')
+	const [login, setLogin] = useState('')
 
-	const handlerChangeLog = newName => {
+	const handlerChangeUser = newUser => {
+		setUser(newUser)
+	}
+	const handlerChangeUserName = newName => {
 		setUserName(newName)
 	}
-
-	const handlerJoined = newName => {
-		setJoined(newName)
+	const handlerJoined = newJoin => {
+		setJoined(newJoin)
 	}
-	const handlerImg = newName => {
-		setUserImg(newName)
+	const handlerImg = newImg => {
+		setUserImg(newImg)
+	}
+
+	const handlerCompany = newCompany => {
+		setUserCompany(newCompany)
+	}
+
+	const handlerUserBio = newBio => {
+		setUserBio(newBio)
+	}
+
+	const handlerPublicRepo = newPublic => {
+		setPublicRepo(newPublic)
+	}
+	const handlerFollowers = newFollowers => {
+		setFollowers(newFollowers)
+	}
+	const handlerLocation = newLocation => {
+		setLocation(newLocation)
+	}
+
+	const handlerUserBlog = newUserBlog => {
+		setUserBlog(newUserBlog)
+	}
+
+	const handlerUserTwitter = newUserTwitter => {
+		setUserTwitter(newUserTwitter)
+	}
+
+	const handlerLogin = newLogin => {
+		setLogin(newLogin)
 	}
 
 	const providerValue = {
+		//theme
 		theme,
 		switchTheme,
+		//fetch
+		user,
 		userName,
-		userURL,
+		userCompany,
 		joined,
 		userBio,
 		publicRepo,
-		fallowers,
+		followers,
 		location,
 		userBlog,
 		userTwitter,
-		data,
+		login,
 		userImg,
-		changeUser: handlerChangeLog,
+		//setMethod
+		changeUser: handlerChangeUser,
 		changeJoined: handlerJoined,
-		changeImg: handlerImg
+		changeImg: handlerImg,
+		changeCompany: handlerCompany,
+		changeUserBio: handlerUserBio,
+		changePublicRepo: handlerPublicRepo,
+		changeFollowers: handlerFollowers,
+		changeLocation: handlerLocation,
+		changeUserBlog: handlerUserBlog,
+		changeUserTwitter: handlerUserTwitter,
+		changeLogin: handlerLogin,
+		changeUserName: handlerChangeUserName
 	}
 
 	return <GlobalStoreContext.Provider value={providerValue}>{props.children}</GlobalStoreContext.Provider>

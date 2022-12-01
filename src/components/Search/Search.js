@@ -7,52 +7,61 @@ import axios from 'axios'
 const Search = () => {
 	const serchInput = useRef(null)
 	const GlobalStore = useContext(GlobalStoreContext)
+	const globalUserName = GlobalStore.user
 	const API = 'https://api.github.com/users/'
-	const globalUserName = GlobalStore.userName
-	const globalUserImg = GlobalStore.userImg
-	const endpoints = `${API}`
 	
-	const searchForJoined = () => {
-		axios({
-			method: 'get',
-			url: `${API}${globalUserName}`,
-		}).then((res) => {
-			GlobalStore.changeJoined(res.data.created_at)
-		})
+	const fetchData = () => {
+		
+		const userName = `${API}${globalUserName}`
+		
+		axios.get(userName)
+			.then(res => {
+				const getName = res.data.name
+				const getCompany = res.data.company
+				const getImg = res.data.avatar_url
+				const getJoined = res.data.updated_at
+				const getUserBio = res.data.bio
+				const getPublicRepo = res.data.public_repos
+				const getFollowers  = res.data.followers
+				const getLocation  = res.data.location
+				const getUserBlog  = res.data.blog
+				const getTwitter  = res.data.twitter_username
+				const getLogin  = res.data.login
+
+				GlobalStore.changeCompany(getName)
+				GlobalStore.changeCompany(getCompany)
+				GlobalStore.changeImg(getImg)
+				GlobalStore.changeJoined(getJoined)
+				GlobalStore.changeUserBio(getUserBio)
+				GlobalStore.changePublicRepo(getPublicRepo)
+				GlobalStore.changeFollowers(getFollowers)
+				GlobalStore.changeLocation(getLocation)
+				GlobalStore.changeUserBlog(getUserBlog)
+				GlobalStore.changeUserTwitter(getTwitter)
+				GlobalStore.changeLogin(getLogin)
+
+			})
+			.catch(err => {
+				console.log(err);
+			})
 	}
-	const searchForImg = () => {
-		axios.get(`${API}${globalUserName}`)
-		.then((res) => {
-			GlobalStore.changeImg(res.data.avatar_url)
-		})
-		.catch((err)=> {
-			console.log(err)
-		})
-	}
-	
+
 	const handleSearchUser = () => {
 		GlobalStore.changeUser(serchInput.current.value)
-		searchForImg()
-		searchForJoined() 
-		
-		
+		fetchData()
 	}
 
-
 	useEffect(() => {
-		searchForJoined() 
-		searchForImg()
-	  }, [globalUserName,globalUserImg])
+		fetchData()
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [globalUserName])
 
-	  console.log(globalUserName,globalUserImg)
-	
-	
 	return (
 		<>
 			<div className="search-bar">
 				<div className="search-wrapper">
 					<img className="search-icon" src={searchIcon} alt="" />
-					<input ref={serchInput}  className="search-input" type="text" placeholder="Search GitHub username…" />
+					<input ref={serchInput} className="search-input" type="text" placeholder="Search GitHub username…" />
 				</div>
 				<button onClick={handleSearchUser} className="search-btn">
 					Search

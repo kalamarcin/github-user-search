@@ -12,6 +12,7 @@ const User = () => {
 					<div className="avatar"><img src={GlobalStore.userImg} alt="" /></div>
 				</div>
 				<div className="user-decription">
+					<p>Login: {GlobalStore.login}</p>
 					<p>{GlobalStore.joined}</p>
 				</div>
 				<div className="stats-box">
