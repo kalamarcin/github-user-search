@@ -38,13 +38,18 @@ const User = () => {
 					</div>
 				</div>
 				<div className="user-contact">
-					<p className="icon_p">
+					<p className={GlobalStore.location === null ? 'empty' : 'icon_p'}>
 						<i className="fa-solid fa-location-dot"></i>
-						{GlobalStore.location}
+						{GlobalStore.location === null ? 'Not Available' : GlobalStore.location}
 					</p>
-					<p className="icon_p">
+					<p className={GlobalStore.userBlog === '' ? 'empty' : 'icon_p'}>
 						<i className="fa-sharp fa-solid fa-link"></i>
-						<a href={GlobalStore.userBlog}>{GlobalStore.userBlog}</a>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href={GlobalStore.userBlog === '' ? '/' : GlobalStore.userBlog}>
+							{GlobalStore.userBlog === '' ? 'Not Available' : GlobalStore.userBlog}
+						</a>
 					</p>
 					<p className={GlobalStore.userTwitter === null ? 'empty' : 'icon_p'}>
 						<i className="fa-brands fa-twitter"></i>
