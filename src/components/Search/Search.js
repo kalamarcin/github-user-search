@@ -8,10 +8,10 @@ const Search = () => {
 	const serchInput = useRef(null)
 	const GlobalStore = useContext(GlobalStoreContext)
 	const globalUserName = GlobalStore.user
-	const API = 'https://api.github.com/users/'
+	
 	
 	const fetchData = () => {
-		
+		const API = 'https://api.github.com/users/'
 		const userName = `${API}${globalUserName}`
 		
 		axios.get(userName)
@@ -23,18 +23,20 @@ const Search = () => {
 				const getUserBio = res.data.bio
 				const getPublicRepo = res.data.public_repos
 				const getFollowers  = res.data.followers
+				const getFollowing = res.data.following
 				const getLocation  = res.data.location
 				const getUserBlog  = res.data.blog
 				const getTwitter  = res.data.twitter_username
 				const getLogin  = res.data.login
 
-				GlobalStore.changeCompany(getName)
+				GlobalStore.changeUserName(getName)
 				GlobalStore.changeCompany(getCompany)
 				GlobalStore.changeImg(getImg)
 				GlobalStore.changeJoined(getJoined)
 				GlobalStore.changeUserBio(getUserBio)
 				GlobalStore.changePublicRepo(getPublicRepo)
 				GlobalStore.changeFollowers(getFollowers)
+				GlobalStore.changeFollowing(getFollowing)
 				GlobalStore.changeLocation(getLocation)
 				GlobalStore.changeUserBlog(getUserBlog)
 				GlobalStore.changeUserTwitter(getTwitter)

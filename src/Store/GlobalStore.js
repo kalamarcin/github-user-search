@@ -13,6 +13,7 @@ export const GlobalStoreContext = createContext({
 	userBio: '',
 	publicRepo: '',
 	followers: '',
+	following: '',
 	location: '',
 	userBlog: '',
 	userTwitter: '',
@@ -26,6 +27,7 @@ export const GlobalStoreContext = createContext({
 	changeUserBio: () => {},
 	changePublicRepo: () => {},
 	changeFollowers: () => {},
+	changeFollowing: () => {},
 	changeLocation: () => {},
 	changeUserBlog: () => {},
 	changeUserTwitter: () => {},
@@ -47,6 +49,7 @@ const GlobalStore = props => {
 	const [userBio, setUserBio] = useState('')
 	const [publicRepo, setPublicRepo] = useState('')
 	const [followers, setFollowers] = useState('')
+	const [following, setFollowing] = useState('')
 	const [location, setLocation] = useState('')
 	const [userBlog, setUserBlog] = useState('')
 	const [userTwitter, setUserTwitter] = useState('')
@@ -79,6 +82,9 @@ const GlobalStore = props => {
 	const handlerFollowers = newFollowers => {
 		setFollowers(newFollowers)
 	}
+	const handlerFollowing = newFollwing => {
+		setFollowing(newFollwing)
+	}
 	const handlerLocation = newLocation => {
 		setLocation(newLocation)
 	}
@@ -107,6 +113,7 @@ const GlobalStore = props => {
 		userBio,
 		publicRepo,
 		followers,
+		following,
 		location,
 		userBlog,
 		userTwitter,
@@ -120,6 +127,7 @@ const GlobalStore = props => {
 		changeUserBio: handlerUserBio,
 		changePublicRepo: handlerPublicRepo,
 		changeFollowers: handlerFollowers,
+		changeFollowing: handlerFollowing,
 		changeLocation: handlerLocation,
 		changeUserBlog: handlerUserBlog,
 		changeUserTwitter: handlerUserTwitter,

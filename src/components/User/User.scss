@@ -1,29 +1,87 @@
 .user-box {
-	display: flex;
 	margin: 20px 0 20px 0;
 	box-shadow: var(--box-shadow);
-    border-radius: 15px;
+	border-radius: 15px;
 	background-color: var(--component);
-    padding: 30px 25px 30px 25px;
+	padding: 30px 25px 30px 25px;
 
-	.user-info {
-		.avatar {
+	.user_info_grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 1px;
+
+		.cell_avatar {
 			img {
+				border-radius: 50%;
+				width: 70px;
+				height: 70px;
 			}
 		}
-		.user-data {
+		.cell_data {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			line-height: 20px;
+
+			.name {
+				color: var(--font-header);
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+			.login {
+				color: var(--button);
+				margin-bottom: 10px;
+			}
+
+			.created {
+				color: var(--font);
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 19px;
+			}
 		}
 	}
+
 	.user-decription {
+		margin-top: 30px;
+		color: var(--font);
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 25px;
 	}
-	.stats-box {
-		.repos {
+	.status_grid {
+		margin-top: 30px;
+		border-radius: 10px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 5px;
+		grid-row-gap: 1px;
+		padding: 20px;
+		background-color: var(--background);
+		.columns {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			.title {
+				color: var(--font);
+				font-size: 11px;
+				line-height: 16px;
+			}
+			.count {
+				margin-top: 10px;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 24px;
+				color: var(--font);
+			}
 		}
-		.follower {
-		}
-		.following {
-		}
-	}
-	.user-contact {
+		
+
+		
 	}
 }
