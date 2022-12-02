@@ -20,7 +20,7 @@ const Search = () => {
 				const getName = UserObj.name
 				const getCompany = UserObj.company
 				const getImg = UserObj.avatar_url
-				const getJoined = UserObj.updated_at
+				const getJoined = UserObj.created_at
 				const getUserBio = UserObj.bio
 				const getPublicRepo = UserObj.public_repos
 				const getFollowers = UserObj.followers

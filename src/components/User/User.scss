@@ -1,32 +1,31 @@
 .user-box {
-	a {
-		text-decoration: none;
-		font-weight: 400;
-		font-size: 16px;
-		line-height: 22px;
-		color: var(--font);
-		
-	}
+	max-width: 700px;
+	width: 100%;
 	margin: 20px 0 20px 0;
 	box-shadow: var(--box-shadow);
 	border-radius: 15px;
 	background-color: var(--component);
 	padding: 30px 25px 30px 25px;
 
-	.user_info_grid {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		grid-template-rows: 1fr;
-		grid-column-gap: 20px;
-		grid-row-gap: 1px;
+	a {
+		text-decoration: none;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
+		color: var(--font);
+	}
 
-		.cell_avatar {
-			img {
-				border-radius: 50%;
-				width: 70px;
-				height: 70px;
-			}
+	.cell_avatar {
+		float: left;
+		
+		margin-right: 25px;
+		img {
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
 		}
+	}
+	.user_info_grid {
 		.cell_data {
 			display: flex;
 			flex-direction: column;
@@ -85,7 +84,7 @@
 				font-weight: 700;
 				font-size: 16px;
 				line-height: 24px;
-				color: var(--font);
+				color: var(--font-header);
 			}
 		}
 	}
@@ -110,7 +109,6 @@
 				font-size: 16px;
 				line-height: 22px;
 				color: var(--font);
-				
 			}
 			i {
 				width: 20px;
@@ -129,5 +127,37 @@
 				font-size: 20px;
 			}
 		}
+	}
+}
+
+// Tablet styles
+
+@media screen and (min-width: 800px) {
+	.user-box {
+		padding: 50px 40px 50px 40px;
+		.user-contact {
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			.icon_p {
+				a {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Desktop Styles
+
+@media screen and (min-width: 1000px) {
+	.user-box {
+		
+		.cell_avatar {
+			height: 400px;
+		}
+
+		
 	}
 }

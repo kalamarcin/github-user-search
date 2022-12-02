@@ -12,10 +12,10 @@ const User = () => {
 	return (
 		<>
 			<div className="user-box">
-				<div className="user_info_grid">
 					<div className="cell_avatar">
 						<img src={GlobalStore.userImg} alt="" />
 					</div>
+				<div className="user_info_grid">
 					<div className="cell_data">
 						<p className="name">{GlobalStore.userName}</p>
 						<p className="login">@{GlobalStore.login}</p>
