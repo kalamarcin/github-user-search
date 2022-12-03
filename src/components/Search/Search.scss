@@ -1,82 +1,87 @@
 .search-bar {
-	max-width: 700px;
-	width: 100%;
-	box-shadow: var(--box-shadow);
-	margin-top: 2rem;
-	background-color: var(--component);
-	display: flex;
-	height: 70px;
-	border-radius: 15px;
-	align-items: center;
-	justify-content: space-between;
-	.error {
+  max-width: 700px;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+  background-color: var(--component);
+  display: flex;
+  height: 70px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: space-between;
+  .error {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .search-wrapper {
+    display: flex;
 
-	}
-	.hide {
-		display: none;
-	}
-	.search-wrapper {
-		display: flex;
+    width: 100%;
 
-		width: 100%;
+    .search-icon {
+      margin: 0 1rem 0 1rem;
+    }
 
-		.search-icon {
-			margin: 0 1rem 0 1rem;
-		}
+    .search-input {
+      display: flex;
+      width: 100%;
+      caret-color: var(--button);
+      background-color: var(--component);
+      color: var(--font);
+      font-family: var(--font-main);
+      border: none;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-family: var(--font-main);
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--font);
+      }
+    }
+  }
 
-		.search-input {
-			display: flex;
-			width: 100%;
-			caret-color: var(--button);
-			background-color: var(--component);
-			color: var(--font);
-			font-family: var(--font-main);
-			border: none;
-			&:focus {
-				outline: none;
-			}
-			&::placeholder {
-				font-family: var(--font-main);
-				font-size: 13px;
-				font-weight: 400;
-				color: var(--font);
-			}
-		}
-	}
-
-	.search-btn {
-		border-radius: 10px;
-		padding: 15px 15px 15px 15px;
-		margin-right: 10px;
-		border: none;
-		font-weight: 700;
-		font-size: 14px;
-		font-style: normal;
-		background-color: var(--button);
-		color: var(--font-second);
-		font-family: var(--font-main);
-		
-	}
+  .search-btn {
+    border-radius: 10px;
+    padding: 15px 15px 15px 15px;
+    margin-right: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    background-color: var(--button);
+    color: var(--font-second);
+    font-family: var(--font-main);
+  }
 }
 
 // Tablet styles
 
 @media screen and (min-width: 800px) {
-	.search-bar {
-		.search-btn {
-			transition: opacity 0.3s;
-			cursor: pointer;
-			&:hover {
-				opacity: 0.5;
-
-			}
-		}
-	}
+  .search-bar {
+    .error {
+      display: flex;
+      width: 200px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      color: #f74646;
+    }
+    .search-btn {
+      transition: opacity 0.3s;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
-// Desktop Styles 
+// Desktop Styles
 
 @media screen and (min-width: 1000px) {
-	
 }
-
