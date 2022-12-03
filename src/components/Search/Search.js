@@ -12,16 +12,16 @@ const Search = () => {
 	}
 	const serchInput = useRef(null)
 	const GlobalStore = useContext(GlobalStoreContext)
-	const globalUserName = GlobalStore.user
+	const globalUser = GlobalStore.user
 
 	const fetchData = () => {
 		const API = 'https://api.github.com/users/'
-		const userName = `${API}${globalUserName}`
+		const userName = `${API}${globalUser}`
 
 		axios
 			.get(userName)
 			.then(res => {
-				
+			
 				const UserObj = res.data
 				const getName = UserObj.name
 				const getCompany = UserObj.company
@@ -50,19 +50,23 @@ const Search = () => {
 				GlobalStore.changeLogin(getLogin)
 			})
 			.catch(err => {
-				console.log(err);
+				console.error(err);
+			})
+			.finally(() => {
+
 			})
 	}
 
 	const handleSearchUser = () => {
 		GlobalStore.changeUser(serchInput.current.value)
 		fetchData()
+		serchInput.current.value = ''
 	}
 
 	useEffect(() => {
 		fetchData()
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [globalUserName])
+	}, [globalUser])
 
 	return (
 		<>
