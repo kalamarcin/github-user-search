@@ -13,6 +13,13 @@
 
 ## Overview
 
+- On first load, show the profile information for Octocat.
+- Display an error message if no user is found when a new search is made.
+- If a GitHub user hasn't added their name, show their username where the name would be without the `@` symbol and again below with the `@` symbol.
+- If a GitHub user's bio is empty, show the text "This profile has no bio" with transparency added. T
+- If any of the location, website, twitter, or company properties are empty, show the text "Not Available" with transparency added 
+- Website, twitter, and company information should all be links to those resaources. For the company link, it should remove the `@` symbol and link to the company page on GitHub. For Octocat, with `@github` being returned for the company, this would lead to a URL of `https://github.com/github`.
+
 ### The challenge
 
 Users should be able to:

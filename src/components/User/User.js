@@ -8,7 +8,7 @@ const User = () => {
 	const GlobalStore = useContext(GlobalStoreContext)
 	Moment.locale('en')
 	const dt = GlobalStore.joined
-	const lorem = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.'
+	const noBio = 'This profile has no bio'
 	return (
 		<>
 			<div className="user-box">
@@ -22,7 +22,7 @@ const User = () => {
 						<p className="created">Joined {Moment(dt).format('d MMM yyyy')}</p>
 					</div>
 				</div>
-				<div className="user-decription">{GlobalStore.userBio == null ? lorem : GlobalStore.userBio}</div>
+				<div className="user-decription">{GlobalStore.userBio == null ? noBio : GlobalStore.userBio}</div>
 				<div className="status_grid">
 					<div className="columns">
 						<p className="title">Repos</p>
