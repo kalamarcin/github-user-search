@@ -51,6 +51,8 @@ $ npm install
 
 $ npm start
 
+```
+
 ### Useful resources
 
 - [Dark Theme Toggle by Code Commerce](https://youtu.be/y0LwoUi_Kcw) - This is an amazing tutorial which helped me finally understand toggle the theme on my web.
