@@ -1,4 +1,4 @@
-[](https://github.com/kalamarcin/github-user-search/blob/master/src/assets/preview.jpg?raw=true)
+![](https://github.com/kalamarcin/github-user-search/blob/master/src/assets/preview.jpg?raw=true)
 
 ## Table of contents
 
