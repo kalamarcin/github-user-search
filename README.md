@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://devfinder-mk.netlify.app/)
+- Live Site URL: [Devfinder](https://devfinder-mk.netlify.app/)
 
 ## My process
 
@@ -44,12 +44,11 @@ Users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Dark Theme Toggle by Code Commerce](https://youtu.be/y0LwoUi_Kcw) - This is an amazing tutorial which helped me finally understand toggle the theme on my web.
 
 
 ## Author
 
-- Website - [Marcin](https://portfolio-mk-react.netlify.app/)
+- Website - [Marcin Kala](https://portfolio-mk-react.netlify.app/)
 
 
