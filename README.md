@@ -1,14 +1,5 @@
 ![](https://github.com/kalamarcin/github-user-search/blob/master/src/assets/preview.jpg?raw=true)
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
 
 
 ## Overview
@@ -48,6 +39,17 @@ Users should be able to:
 - Moment JS
 - [React](https://reactjs.org/) - JS library
 
+
+## Setup
+
+To run this project, clone it and install it locally using npm:
+
+```
+$ git clone git@github.com:kalamarcin/github-user-search.git
+$ cd github-user-search
+$ npm install
+
+$ npm start
 
 ### Useful resources
 
