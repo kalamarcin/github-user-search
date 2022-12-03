@@ -49,14 +49,15 @@ const Search = () => {
         GlobalStore.changeLogin(getLogin)
       })
       .catch(err => {
+        console.error(err)
 				err.response.status === 404 && GlobalStore.changeError(true)
       })
-      .finally(() => {})
+      
   }
 
   const handleSearchUser = () => {
     GlobalStore.changeUser(serchInput.current.value)
-    fetchData()
+    // fetchData()
     serchInput.current.value = ''
   }
 

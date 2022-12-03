@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). 
 
 ## Table of contents
 
@@ -9,7 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -26,28 +23,23 @@ Users should be able to:
 - See relevant user information based on their search
 - Switch between light and dark themes
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://devfinder-mk.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass
+- Axios
+- useLocalStorage Hook
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Moment JS
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-
-### What I learned
-
 
 
 ### Useful resources
@@ -55,12 +47,9 @@ Users should be able to:
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-
-
+- Website - [Marcin](https://portfolio-mk-react.netlify.app/)
 
 

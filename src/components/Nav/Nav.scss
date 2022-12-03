@@ -33,3 +33,14 @@
 		}
 	}
 }
+
+@media screen and (min-width: 800px) { 
+	.navbar {
+		.toggle {
+			transition: 0.3s;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+}
