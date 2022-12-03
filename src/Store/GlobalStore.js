@@ -19,6 +19,7 @@ export const GlobalStoreContext = createContext({
 	userTwitter: '',
 	login: '',
 	userImg: '',
+	error: Boolean,
 	//setMethod
 	changeUser: () => {},
 	changeJoined: () => {},
@@ -33,6 +34,8 @@ export const GlobalStoreContext = createContext({
 	changeUserTwitter: () => {},
 	changeLogin: () => {},
 	changeUserName: () => {},
+	changeError: () => {}
+
 })
 
 const GlobalStore = props => {
@@ -54,6 +57,7 @@ const GlobalStore = props => {
 	const [userBlog, setUserBlog] = useState('')
 	const [userTwitter, setUserTwitter] = useState('')
 	const [login, setLogin] = useState('')
+	const [error, setError] = useState(false)
 
 	const handlerChangeUser = newUser => {
 		setUser(newUser)
@@ -101,6 +105,10 @@ const GlobalStore = props => {
 		setLogin(newLogin)
 	}
 
+	const handleError = (newError) => {
+		setError(newError)
+	}
+
 	const providerValue = {
 		//theme
 		theme,
@@ -119,6 +127,7 @@ const GlobalStore = props => {
 		userTwitter,
 		login,
 		userImg,
+		error,
 		//setMethod
 		changeUser: handlerChangeUser,
 		changeJoined: handlerJoined,
@@ -133,6 +142,7 @@ const GlobalStore = props => {
 		changeUserTwitter: handlerUserTwitter,
 		changeLogin: handlerLogin,
 		changeUserName: handlerChangeUserName,
+		changeError: handleError,
 	}
 
 	return <GlobalStoreContext.Provider value={providerValue}>{props.children}</GlobalStoreContext.Provider>

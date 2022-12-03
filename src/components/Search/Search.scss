@@ -9,7 +9,12 @@
 	border-radius: 15px;
 	align-items: center;
 	justify-content: space-between;
+	.error {
 
+	}
+	.hide {
+		display: none;
+	}
 	.search-wrapper {
 		display: flex;
 

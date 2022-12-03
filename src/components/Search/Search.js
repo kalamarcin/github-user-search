@@ -5,11 +5,11 @@ import { GlobalStoreContext } from '../../Store/GlobalStore'
 import axios from 'axios'
 
 const Search = () => {
-	const handleKeyDown = (event) => {
+	const handleKeyDown = event => {
 		if (event.key === 'Enter') {
 			handleSearchUser()
 		}
-	  }
+	}
 	const serchInput = useRef(null)
 	const GlobalStore = useContext(GlobalStoreContext)
 	const globalUserName = GlobalStore.user
@@ -21,6 +21,7 @@ const Search = () => {
 		axios
 			.get(userName)
 			.then(res => {
+				
 				const UserObj = res.data
 				const getName = UserObj.name
 				const getCompany = UserObj.company
@@ -49,7 +50,7 @@ const Search = () => {
 				GlobalStore.changeLogin(getLogin)
 			})
 			.catch(err => {
-				console.log(err)
+				console.log(err);
 			})
 	}
 
@@ -68,9 +69,16 @@ const Search = () => {
 			<div className="search-bar">
 				<div className="search-wrapper">
 					<img className="search-icon" src={searchIcon} alt="" />
-					<input ref={serchInput} onKeyDown={handleKeyDown} className="search-input" type="text" placeholder="Search GitHub username…" />
+					<input
+						ref={serchInput}
+						onKeyDown={handleKeyDown}
+						className="search-input"
+						type="text"
+						placeholder="Search GitHub username…"
+					/>
 				</div>
-				<button onClick={handleSearchUser}  className="search-btn">
+				<p className={GlobalStore.error === true ? 'error' : 'hide'}>No results</p>
+				<button onClick={handleSearchUser} className="search-btn">
 					Search
 				</button>
 			</div>
